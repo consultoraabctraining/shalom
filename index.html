@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Tags -->
+  <title>Fundación Shalom Niños | Transformando vidas en Bolivia</title>
+  <meta name="description" content="Organización sin fines de lucro en Santa Cruz de la Sierra, Bolivia. Apoyo integral en educación, nutrición, deporte y valores a más de 1,056 niños.">
+  <meta name="keywords" content="fundacion, donacion bolivia, shalom niños, santa cruz, ayuda social, plan 3000, niños sanos">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- ── HEADER & NAVIGATION ── -->
+  <header id="navbar-header">
+    <div class="nav-container">
+      <a href="#inicio" class="logo-wrapper">
+        <img src="Shalom/logo oficial nuevo.webp" alt="Logo Fundación Shalom Niños" class="logo-img">
+        <div class="logo-text">
+          Fundación Shalom
+          <span>Niños · Bolivia</span>
+        </div>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li class="nav-dropdown">
+          <a href="#centros" class="nav-link">Centros <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></a>
+          <div class="nav-dropdown-menu glass">
+            <a href="#centros" onclick="showCenter('recreo')" class="dropdown-item">Shalom Recreo</a>
+            <a href="#centros" onclick="showCenter('pascana')" class="dropdown-item">Shalom Pascana</a>
+            <a href="#centros" onclick="showCenter('agape')" class="dropdown-item">Shalom Ágape</a>
+            <a href="#centros" onclick="showCenter('carmen')" class="dropdown-item">Shalom El Carmen</a>
+          </div>
+        </li>
+        <li><a href="#ayuda" class="nav-link">Cómo ayudar</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        <li><button class="btn btn-primary" onclick="openModal('donateModal')">Donar ahora</button></li>
+      </ul>
+      
+      <button class="mob-menu-btn" aria-label="Abrir Menú">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── HERO SECTION ── -->
+  <section class="hero" id="inicio">
+    <div class="hero-background">
+      <img src="Shalom/portada.webp" alt="Niños de la Fundación Shalom" class="hero-bg-img">
+      <div class="hero-overlay"></div>
+      <div class="hero-glow-orb"></div>
+    </div>
+    
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <div class="section-tag">Santa Cruz de la Sierra · Desde 2015</div>
+        <h1 class="hero-title text-gradient">Cada niño merece crecer con dignidad y esperanza</h1>
+        <p class="hero-description">Somos una organización sin fines de lucro comprometida a transformar la realidad de niños, adolescentes y jóvenes vulnerables en Bolivia mediante un desarrollo humano e integral.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openModal('donateModal')">
+            <i class="fas fa-heart"></i> Hacer una donación
+          </button>
+          <a href="#centros" class="btn btn-outline">
+            Conocer nuestros centros <i class="fas fa-arrow-down" style="font-size:0.8rem; margin-left:4px;"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-widget reveal delay-200">
+        <div class="widget-card glass">
+          <h3 class="widget-title">Nuestro Impacto</h3>
+          <div class="widget-stat-row">
+            <div class="widget-stat-item">
+              <div class="widget-stat-icon"><i class="fas fa-children"></i></div>
+              <div class="widget-stat-info">
+                <span class="widget-stat-num">1,056+</span>
+                <span class="widget-stat-label">Niños beneficiados hoy</span>
+              </div>
+            </div>
+            <div class="widget-stat-item">
+              <div class="widget-stat-icon"><i class="fas fa-hand-holding-heart"></i></div>
+              <div class="widget-stat-info">
+                <span class="widget-stat-num">100%</span>
+                <span class="widget-stat-label">Transparencia en donativos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-prompt">
+      <span>Desplázate</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS BAR ── -->
+  <div class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card glass">
+        <div class="stat-number text-gold" data-target="1056">0</div>
+        <div class="stat-label">Niños beneficiados</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-number text-gold" data-target="18">0</div>
+        <div class="stat-label">Programas activos</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-number text-gold" data-target="4">0</div>
+        <div class="stat-label">Centros en Santa Cruz</div>
+      </div>
+      <div class="stat-card glass">
+        <div class="stat-number text-gold" data-target="2015">0</div>
+        <div class="stat-label">Año de Fundación</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ABOUT SECTION (NOSOTROS) ── -->
+  <section class="section" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="reveal">
+          <span class="section-tag">¿Quiénes somos?</span>
+          <h2 class="section-title">Una obra que transforma vidas desde el corazón</h2>
+          <p class="section-description" style="margin-bottom:30px;">La Fundación Shalom Niños apoya de manera integral a beneficiarios de zonas de alto riesgo social en Santa Cruz de la Sierra. Actuamos en todas las áreas del desarrollo humano para romper el ciclo de la pobreza y brindar herramientas que construyan un futuro sólido.</p>
+          
+          <div class="about-card-stack">
+            <div class="mv-box glass">
+              <h3>Nuestra Misión</h3>
+              <p>Que todo niño, adolescente y joven esté preparado para toda buena obra, bajo principios éticos y morales para impactar a su familia, comunidad y nación.</p>
+            </div>
+            <div class="mv-box vision glass">
+              <h3>Nuestra Visión</h3>
+              <p>Ser una fundación referente en la transformación integral de la niñez y juventud en Bolivia, expandiendo nuestra presencia en comunidades vulnerables con esperanza y oportunidades reales.</p>
+            </div>
+          </div>
+          
+          <div class="history-timeline glass">
+            <div class="timeline-dot"></div>
+            <h4 class="timeline-year">Nuestra Historia</h4>
+            <p class="timeline-text">Comenzamos en 2015 en la zona El Recreo. Tras constatar el cambio profundo en las familias, decidimos extendernos a otras áreas vulnerables como La Pascana y El Carmen en el Plan 3000, y finalmente abrimos Shalom Ágape.</p>
+          </div>
+        </div>
+        
+        <div class="reveal delay-200">
+          <div class="values-grid" style="margin-bottom:48px;">
+            <div class="value-card">
+              <div class="value-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="value-info">
+                <h4>Educación Integral</h4>
+                <p>Nivelación escolar y clases especializadas para asegurar la continuidad de sus estudios y el desarrollo cognitivo.</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="fas fa-scale-balanced"></i></div>
+              <div class="value-info">
+                <h4>Valores y Principios</h4>
+                <p>Formación fundamentada en principios morales y éticos que forjan el carácter y dan sentido a su proyecto de vida.</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="fas fa-people-roof"></i></div>
+              <div class="value-info">
+                <h4>Impacto Familiar</h4>
+                <p>Empoderamos a las madres y fortalecemos el entorno del hogar porque una familia fuerte sostiene a un niño fuerte.</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-icon"><i class="fas fa-shield-halved"></i></div>
+              <div class="value-info">
+                <h4>Protección y Dignidad</h4>
+                <p>Ofrecemos espacios seguros y limpios donde se respeta la identidad y la dignidad de cada participante.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="team-wrap">
+            <h3 class="team-section-title">Liderazgo</h3>
+            <p class="team-section-desc">El equipo de dirección y los tutores locales que hacen posible cada programa día tras día.</p>
+            <div class="team-cards-grid">
+              <div class="team-member-card">
+                <div class="member-photo-frame">
+                  <img src="Shalom/director foto oficial.webp" alt="Pastor Lucas Cardoso" class="member-photo">
+                </div>
+                <h4>Lucas Cardoso</h4>
+                <span>Director General</span>
+              </div>
+              <div class="team-member-card">
+                <div class="member-photo-frame">
+                  <img src="Shalom/shalom recreo equipo oficial.webp" alt="Equipo El Recreo" class="member-photo">
+                </div>
+                <h4>Equipo Recreo</h4>
+                <span>Zona El Recreo</span>
+              </div>
+              <div class="team-member-card">
+                <div class="member-photo-frame">
+                  <img src="Shalom/shalom pascana equipo oficial.webp" alt="Equipo Pascana" class="member-photo">
+                </div>
+                <h4>Equipo Pascana</h4>
+                <span>La Pascana</span>
+              </div>
+              <div class="team-member-card">
+                <div class="member-photo-frame">
+                  <img src="Shalom/shalom agape equipo oficial.webp" alt="Equipo Ágape" class="member-photo">
+                </div>
+                <h4>Equipo Ágape</h4>
+                <span>Zona Ágape</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CENTERS SHOWCASE SECTION ── -->
+  <section class="section centers-showcase" id="centros">
+    <div class="container">
+      <div class="section-header reveal" style="margin-left:auto; margin-right:auto; text-align:center;">
+        <span class="section-tag">Centros de Esperanza</span>
+        <h2 class="section-title">Nuestras 4 Ubicaciones en Santa Cruz</h2>
+        <p class="section-description">Haz clic en cada pestaña para descubrir los programas, testimonios locales e impacto de cada uno de nuestros centros comunitarios.</p>
+      </div>
+      
+      <div class="centers-tabs-wrapper reveal delay-100">
+        <div class="centers-tabs glass">
+          <button class="center-tab-btn active" onclick="showCenter('recreo')">
+            <i class="fas fa-house-chimney"></i> Recreo
+          </button>
+          <button class="center-tab-btn" onclick="showCenter('pascana')">
+            <i class="fas fa-tree"></i> La Pascana
+          </button>
+          <button class="center-tab-btn" onclick="showCenter('agape')">
+            <i class="fas fa-heart"></i> Ágape
+          </button>
+          <button class="center-tab-btn" onclick="showCenter('carmen')">
+            <i class="fas fa-house-laptop"></i> El Carmen
+          </button>
+        </div>
+      </div>
+      
+      <!-- 1. SHALOM RECREO -->
+      <div class="center-content-pane active" id="center-recreo">
+        <div class="center-showcase-grid">
+          <div class="center-info-col reveal">
+            <span class="section-tag">Centro Fundacional (2015)</span>
+            <h2>Shalom Recreo</h2>
+            <p class="lead">El primer centro de nuestra fundación, ubicado en la Zona El Recreo. Atiende integralmente a más de 450 niños en áreas esenciales de nutrición, tecnología, música y deporte.</p>
+            <p class="tagline">"Sus sonrisas son el reflejo del impacto que se puede lograr cuando trabajamos juntos por un mismo propósito."</p>
+            
+            <div class="center-badge-card glass">
+              <div class="center-badge-bg-icon"><i class="fas fa-house-chimney"></i></div>
+              <h3>Páginas de la comunidad</h3>
+              <p>Sigue las actividades de El Recreo a través de nuestras redes sociales oficiales:</p>
+              <div class="center-socials">
+                <a href="https://www.facebook.com/profile.php?id=61550988893799&locale=es_LA" class="social-badge" target="_blank" rel="noreferrer noopener">
+                  <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://www.instagram.com/fundacionshalomni.bo813_recreo" class="social-badge" target="_blank" rel="noreferrer noopener">
+                  <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://www.tiktok.com/@fundacionshalom.bo183rc" class="social-badge" target="_blank" rel="noreferrer noopener">
+                  <i class="fab fa-tiktok"></i> TikTok
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="center-visual-col reveal delay-200">
+            <div class="center-main-frame">
+              <img src="Shalom/Recreo/Principal.jpeg" alt="Campamento y actividades en Shalom Recreo" class="center-main-img">
+              <div class="center-img-overlay"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="center-programs-area">
+          <h3 class="programs-section-title">Programas en Shalom Recreo</h3>
+          <div class="programs-grid">
+            <div class="program-card" onclick="openModal('pm-ninos-sanos')">
+              <div class="program-card-header">
+                <img src="Shalom/Alimentos 2.jpg" alt="Nutrición en Recreo" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🥗</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Niños Sanos</h4>
+                <p>Combatimos la desnutrición entregando raciones secas esenciales cuatro veces al año y ofreciendo talleres nutricionales.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-computacion')">
+              <div class="program-card-header">
+                <img src="Shalom/Recreo/Computacion 1.jpg" alt="Computación en Recreo" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">💻</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Computación para Todos</h4>
+                <p>Clases de informática, manejo de herramientas de Microsoft y diseño básico para más de 80 niños y jóvenes.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-equipando')">
+              <div class="program-card-header">
+                <img src="Shalom/Material escolar.jpg" alt="Apoyo escolar en Recreo" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">📚</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Equipando Vidas</h4>
+                <p>Nivelación escolar integral y kits de material anuales para que ningún niño deba abandonar el colegio por falta de útiles.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-deporte')">
+              <div class="program-card-header">
+                <img src="Shalom/Futbol 2.jpg" alt="Fútbol en Recreo" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">⚽</span>
+              </div>
+              <div class="program-card-body">
+                <h4>El Deporte me Edifica</h4>
+                <p>Nuestra escuela de fútbol entrena a jóvenes en el juego limpio, disciplina, trabajo en equipo y prevención de vicios.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-musica')">
+              <div class="program-card-header">
+                <img src="Shalom/Recreo/Musica 3.jpg" alt="Clase de música en Recreo" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🎵</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Música para el Alma</h4>
+                <p>Formación instrumental en batería, bajo, guitarra y teclado como un refugio de paz y posible salida profesional.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-hogares')">
+              <div class="program-card-header">
+                <img src="Shalom/Recreo/Edificando Hogares.jpg" alt="Hogares en Recreo" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🏠</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Edificando Hogares</h4>
+                <p>Apoyo a madres con talleres de estimulación infantil para sus bebés y capacitaciones de costura y repostería.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="center-quote-panel glass">
+          <div class="quote-panel-left">
+            <blockquote>"Con las clases de computación aprendí a usar Excel, Word y hacer mis propios trabajos escolares de forma independiente. ¡Me siento como toda una profesional!"</blockquote>
+          </div>
+          <div class="quote-panel-right">
+            <div class="panel-stat-item">
+              <div class="panel-stat-num">6</div>
+              <div class="panel-stat-label">Programas activos implementados</div>
+            </div>
+            <div class="panel-stat-item">
+              <div class="panel-stat-num">450+</div>
+              <div class="panel-stat-label">Niños y madres beneficiados activamente</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. SHALOM PASCANA -->
+      <div class="center-content-pane" id="center-pascana">
+        <div class="center-showcase-grid">
+          <div class="center-info-col">
+            <span class="section-tag">Ubicación de impacto (Plan 3000)</span>
+            <h2>Shalom Pascana</h2>
+            <p class="lead">Ubicado en una de las zonas más necesitadas de Santa Cruz. Atiende a 350 niños con programas que van desde el soporte escolar y los kits de útiles hasta la formación en música y danza.</p>
+            <p class="tagline">"La educación es el único puente real que alejará a estos niños de la pobreza a largo plazo."</p>
+            
+            <div class="center-badge-card glass">
+              <div class="center-badge-bg-icon"><i class="fas fa-tree"></i></div>
+              <h3>Páginas de la comunidad</h3>
+              <p>Entérate de las actividades de La Pascana en su página de Facebook:</p>
+              <div class="center-socials">
+                <a href="https://www.facebook.com/profile.php?id=61581113355535&locale=es_LA" class="social-badge" target="_blank" rel="noreferrer noopener">
+                  <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="center-visual-col">
+            <div class="center-main-frame">
+              <img src="Shalom/Pascana/Grupal.png" alt="Grupo de niños en Shalom Pascana" class="center-main-img">
+              <div class="center-img-overlay"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="center-programs-area">
+          <h3 class="programs-section-title">Programas en Shalom Pascana</h3>
+          <div class="programs-grid">
+            <div class="program-card" onclick="openModal('pm-p-nivelacion')">
+              <div class="program-card-header">
+                <img src="Shalom/Pascana/testimonio matematicas.jpg" alt="Matemáticas en Pascana" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">📖</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Nivelación Escolar</h4>
+                <p>Clases de refuerzo pedagógico para niños con retraso escolar, ayudándolos a mantenerse en sus cursos.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-p-educacion')">
+              <div class="program-card-header">
+                <img src="Shalom/Material escolar 3.jpg" alt="Útiles en Pascana" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">✏️</span>
+              </div>
+              <div class="program-card-body">
+                <h4>La Educación Cambia Vidas</h4>
+                <p>Buscamos duplicar el apoyo de útiles de 60 Bs a 120 Bs por niño para garantizar cuadernos y mochilas todo el año.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-p-musica')">
+              <div class="program-card-header">
+                <img src="Shalom/Pascana/Avril - Musica.jpg" alt="Clase de música en Pascana" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🎶</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Música para Niños</h4>
+                <p>Docente experto enseña guitarra, batería y canto, inculcando disciplina artística y espiritual.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+
+            <!-- MODALS ALIMENTACIÓN, DANZA Y CONSTRUYENDO FUTUROS CREADOS CON SUS ENLACES -->
+            <div class="program-card" onclick="openModal('pm-p-alimentacion')">
+              <div class="program-card-header">
+                <img src="Shalom/Alimentos 4.jpg" alt="Alimentos en Pascana" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🥙</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Alimentación Saludable</h4>
+                <p>Nutrimos cuerpos y mentes con platos de comida nutritivos periódicos para contrarrestar la desnutrición en la zona.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+
+            <div class="program-card" onclick="openModal('pm-p-ninas')">
+              <div class="program-card-header">
+                <img src="Shalom/Danza 2.jpg" alt="Danza en Pascana" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">💃</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Niñas en Acción</h4>
+                <p>Clases de danza clásica y folclórica combinadas con consejería de valores, reforzando la autoestima femenina.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+
+            <div class="program-card" onclick="openModal('pm-p-futuro')">
+              <div class="program-card-header">
+                <img src="Shalom/Pascana/CONTRUYENDO FUTUROS PASCANA.jpg" alt="Futuro en Pascana" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🌟</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Construyendo Futuros</h4>
+                <p>Formación integral de carácter y liderazgo basada en principios bíblicos para encaminar sus proyectos de vida.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="center-quote-panel glass">
+          <div class="quote-panel-left">
+            <blockquote>"Aprender a tocar un instrumento cambió mis tardes por completo. En lugar de estar en la calle sin hacer nada, vengo a ensayar, escribir mis notas y soñar en grande."</blockquote>
+          </div>
+          <div class="quote-panel-right">
+            <div class="panel-stat-item">
+              <div class="panel-stat-num">350</div>
+              <div class="panel-stat-label">Niños en situación de vulnerabilidad apoyados</div>
+            </div>
+            <div class="panel-stat-item">
+              <div class="panel-stat-num">6</div>
+              <div class="panel-stat-label">Programas escolares y artísticos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. SHALOM ÁGAPE -->
+      <div class="center-content-pane" id="center-agape">
+        <div class="center-showcase-grid">
+          <div class="center-info-col">
+            <span class="section-tag">Comunidad & Fe</span>
+            <h2>Shalom Ágape</h2>
+            <p class="lead">Este centro encarna el amor incondicional. Opera en alianza con la Iglesia Bautista Shalom Ágape y enfoca sus esfuerzos en la música, la estimulación y la alfabetización de adultos mayores en el barrio.</p>
+            <p class="tagline">"Ver a una madre escribir su propio nombre por primera vez es recuperar una dignidad robada por años."</p>
+            
+            <div class="center-badge-card glass">
+              <div class="center-badge-bg-icon"><i class="fas fa-heart"></i></div>
+              <h3>Páginas de la comunidad</h3>
+              <p>Mira las clases y reuniones familiares en la página de Ágape:</p>
+              <div class="center-socials">
+                <a href="https://www.facebook.com/profile.php?id=61574958210203&locale=es_LA" class="social-badge" target="_blank" rel="noreferrer noopener">
+                  <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="center-visual-col">
+            <div class="center-main-frame">
+              <img src="Shalom/Agape/hora feliz.jpeg" alt="Clase grupal en Shalom Ágape" class="center-main-img">
+              <div class="center-img-overlay"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="center-programs-area">
+          <h3 class="programs-section-title">Programas en Shalom Ágape</h3>
+          <div class="programs-grid">
+            <div class="program-card" onclick="openModal('pm-a-musica')">
+              <div class="program-card-header">
+                <img src="Shalom/Agape/musica.jpeg" alt="Música en Ágape" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🎸</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Música para Todos</h4>
+                <p>Fomentamos el aprendizaje instrumental de niños y jóvenes del vecindario como herramienta de inclusión social.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-a-horafeliz')">
+              <div class="program-card-header">
+                <img src="Shalom/Agape/hora feliz 3.jpeg" alt="Hora feliz en Ágape" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">⭐</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Hora Feliz Ágape</h4>
+                <p>Reuniones semanales con juegos, meriendas sanas y formación moral para las familias de la comunidad.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-a-letras')">
+              <div class="program-card-header">
+                <img src="Shalom/Agape/Imagen2.jpg" alt="Alfabetización en Ágape" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">📝</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Letras que Dan Vida</h4>
+                <p>Programa de alfabetización básica para madres y abuelas, enseñándoles a leer, escribir y firmar documentos con seguridad.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="center-quote-panel glass">
+          <div class="quote-panel-left">
+            <blockquote>"Cuando una madre aprende a leer, rompe barreras inmediatas. Ahora puede leer las recetas, tomar el bus correcto, firmar sin miedo y apoyar a sus hijos en sus tareas."</blockquote>
+          </div>
+          <div class="quote-panel-right">
+            <div class="panel-stat-item">
+              <div class="panel-stat-num">3</div>
+              <div class="panel-stat-label">Programas activos en funcionamiento</div>
+            </div>
+            <div class="panel-stat-item">
+              <div class="panel-stat-num">100%</div>
+              <div class="panel-stat-label">Dedicación y amor en cada taller</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. SHALOM EL CARMEN -->
+      <div class="center-content-pane" id="center-carmen">
+        <div class="center-showcase-grid">
+          <div class="center-info-col">
+            <span class="section-tag">Zonas Extremas (Plan 3000)</span>
+            <h2>Shalom El Carmen</h2>
+            <p class="lead">Nuestra ubicación de más reciente enfoque, situada en un barrio vulnerable del Plan 3000. Trabajamos intensamente para terminar su infraestructura física y activar programas nutricionales y escolares estables.</p>
+            <p class="tagline">"No necesitamos esperar a que las paredes estén revocadas para empezar a sembrar esperanza en el Carmen."</p>
+            
+            <div class="center-badge-card glass">
+              <div class="center-badge-bg-icon"><i class="fas fa-house-laptop"></i></div>
+              <h3>Páginas de la comunidad</h3>
+              <p>Conoce los avances de construcción y apoyo en El Carmen:</p>
+              <div class="center-socials">
+                <a href="https://www.facebook.com/profile.php?id=61584240239578&locale=es_LA" class="social-badge" target="_blank" rel="noreferrer noopener">
+                  <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="center-visual-col">
+            <div class="center-main-frame">
+              <img src="Shalom/El Carmen/El carmen 1.jpg" alt="Construcción en Shalom El Carmen" class="center-main-img">
+              <div class="center-img-overlay"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="center-programs-area">
+          <h3 class="programs-section-title">Programas en Shalom El Carmen</h3>
+          <div class="programs-grid">
+            <div class="program-card" onclick="openModal('pm-c-alimentacion')">
+              <div class="program-card-header">
+                <img src="Shalom/El Carmen/El carmen 2.jpg" alt="Alimentación El Carmen" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🍽️</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Alimentación para la Vida</h4>
+                <p>Nuestra mayor urgencia actual. Financia los primeros paquetes de víveres recurrentes para las familias de la zona.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-c-horafeliz')">
+              <div class="program-card-header">
+                <img src="Shalom/El Carmen/El carmen 5.jpg" alt="Merienda El Carmen" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🌈</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Hora Feliz El Carmen</h4>
+                <p>Brindamos a los niños una merienda los fines de semana y compartimos talleres formativos en valores cristianos.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+            
+            <div class="program-card" onclick="openModal('pm-c-centro')">
+              <div class="program-card-header">
+                <img src="Shalom/El Carmen/El carmen 3.jpg" alt="Obras El Carmen" class="program-card-header-img">
+                <div class="program-card-header-overlay"></div>
+                <span class="program-card-icon">🏗️</span>
+              </div>
+              <div class="program-card-body">
+                <h4>Centro de Esperanza</h4>
+                <p>Recaudamos fondos para colocar techos a las aulas, construir baños y edificar un salón comunitario.</p>
+                <span class="program-card-cta">Detalles y Donar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="center-quote-panel glass">
+          <div class="quote-panel-left">
+            <blockquote>"La infraestructura terminada nos permitirá dar apoyo escolar diario y un aula de computación estable. Cada ladrillo colocado es un espacio seguro para el desarrollo."</blockquote>
+          </div>
+          <div class="quote-panel-right">
+            <div class="panel-stat-item">
+              <div class="panel-stat-num">3</div>
+              <div class="panel-stat-label">Programas activos / en desarrollo</div>
+            </div>
+            <div class="panel-stat-item">
+              <div class="panel-stat-num">Plan 3000</div>
+              <div class="panel-stat-label">Zona prioritaria de alto impacto social</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 100% PROMISE BANNER ── -->
+  <section class="promise-banner">
+    <div class="promise-content">
+      <div class="promise-grid">
+        <div class="promise-text reveal">
+          <span class="section-tag" style="color:var(--bg-primary);">Nuestro compromiso</span>
+          <h2>El 100% de tu aporte llega a los niños</h2>
+          <p>Los costos operativos de nuestra oficina central son cubiertos por patrocinadores específicos de administración. Por eso, cada boliviano o dólar que donas financia directamente la comida, cuadernos e instrumentos en los centros.</p>
+        </div>
+        <div class="promise-items-grid reveal delay-200">
+          <div class="promise-item">
+            <span class="promise-icon">🎯</span>
+            <h4>Transparencia total</h4>
+            <p>Informes de gastos disponibles y rendición ante la comunidad boliviana.</p>
+          </div>
+          <div class="promise-item">
+            <span class="promise-icon">📸</span>
+            <h4>Impacto Real</h4>
+            <p>Monitoreo constante con fotos y reportes enviados a cada padrino.</p>
+          </div>
+          <div class="promise-item">
+            <span class="promise-icon">🔒</span>
+            <h4>Donación Segura</h4>
+            <p>Gestión responsable, libre de desvíos y con impacto inmediato.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIAL CAROUSEL ── -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center; margin:0 auto 48px;">
+        <span class="section-tag">Testimonios Reales</span>
+        <h2 class="section-title">Historias de Impacto</h2>
+        <p class="section-description">Voces de los niños, madres y tutores cuyas vidas han tomado un rumbo diferente en nuestros centros.</p>
+      </div>
+      
+      <div class="slider-container reveal delay-100">
+        <div class="slider-wrapper">
+          <!-- Slide 1: Marioly -->
+          <div class="slide">
+            <div class="testimony-card glass">
+              <p class="testimony-quote">"Antes las matemáticas me parecían muy difíciles y me sentía triste cuando mis notas no eran buenas. Pero con la paciencia de la profesora y ejemplos prácticos, aprendí no solo a resolver problemas, sino a creer en mí misma. Ahora participo mucho más en clases."</p>
+              <div class="testimony-author">
+                <div class="author-img-frame">
+                  <img src="Shalom/Pascana/testimonio matematicas.jpg" alt="Marioly" class="author-img">
+                </div>
+                <div class="author-info">
+                  <h4>Marioly Gerardo Gallego</h4>
+                  <span>10 años · Alumna de Nivelación (La Pascana)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 2: Kaitly -->
+          <div class="slide">
+            <div class="testimony-card glass">
+              <p class="testimony-quote">"Espero con ansias la clase de música cada semana. Me siento feliz tocando y aprendiendo las notas. En la escuela de música aprendí que para que algo salga bien se necesita disciplina y constancia. Estoy muy agradecida con la fundación por dejarme soñar."</p>
+              <div class="testimony-author">
+                <div class="author-img-frame">
+                  <img src="Shalom/Pascana/Avril - Musica.jpg" alt="Kaitly Avril" class="author-img">
+                </div>
+                <div class="author-info">
+                  <h4>Kaitly Avril Choque</h4>
+                  <span>11 años · Escuela de Música (La Pascana)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 3: Rosario -->
+          <div class="slide">
+            <div class="testimony-card glass">
+              <p class="testimony-quote">"Ingresé buscando apoyo básico, pero el programa transformó por completo mi manera de educar. Nos enseñaron estimulación temprana y a tratar a nuestros niños con amor y paciencia. Es un soporte material, pero sobre todo de vida."</p>
+              <div class="testimony-author">
+                <div class="author-img-frame">
+                  <img src="Shalom/Kit de higiene 3.jpg" alt="Rosario" class="author-img">
+                </div>
+                <div class="author-info">
+                  <h4>Rosario Flores</h4>
+                  <span>Madre de 5 niños · Programa Supervivencia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Slide 4: Ana Paola -->
+          <div class="slide">
+            <div class="testimony-card glass">
+              <p class="testimony-quote">"El programa ha sido una bendición muy grande. Los cultos de mujeres y las clases de crianza me hicieron ver que necesitaba corregir cosas en mi vida. A través de este apoyo para mi hija, yo también encontré mi reconciliación y paz."</p>
+              <div class="testimony-author">
+                <div class="author-img-frame">
+                  <img src="Shalom/Pascana/Testimonio pascana.jpg" alt="Ana Paola" class="author-img">
+                </div>
+                <div class="author-info">
+                  <h4>Ana Paola Flores</h4>
+                  <span>Madre de Zoe Aitana · Programa Madres</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="slider-controls">
+          <button class="slider-arrow prev" aria-label="Anterior"><i class="fas fa-arrow-left"></i></button>
+          <div class="slider-dots">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+          </div>
+          <button class="slider-arrow next" aria-label="Siguiente"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW TO HELP (CÓMO AYUDAR SECCIÓN) ── -->
+  <section class="section" id="ayuda">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center; margin:0 auto 60px;">
+        <span class="section-tag">Participa hoy</span>
+        <h2 class="section-title">Hay muchas formas de ser parte del cambio</h2>
+        <p class="section-description">No importa la magnitud del aporte, cada acción acerca a un niño boliviano a su máximo potencial de desarrollo.</p>
+      </div>
+      
+      <div class="help-grid reveal delay-100">
+        <div class="help-card glass">
+          <div class="help-card-icon"><i class="fas fa-calendar-days"></i></div>
+          <h3>Donar mensualmente</h3>
+          <p>Un aporte recurrente permite dar estabilidad económica y continuidad a los profesores y programas durante todo el año escolar.</p>
+          <button class="btn btn-outline" onclick="openModal('donateModal')">Comenzar ahora</button>
+        </div>
+        
+        <div class="help-card glass">
+          <div class="help-card-icon"><i class="fas fa-hands-holding"></i></div>
+          <h3>Ser Voluntario</h3>
+          <p>¿Eres maestro, músico, psicólogo o deportista? Dona tu tiempo y talento en cualquiera de las 4 sedes de Santa Cruz.</p>
+          <a href="https://wa.me/59177040086?text=Hola!%20Me%20interesa%20postular%20como%20voluntario%20en%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os." target="_blank" rel="noreferrer noopener" class="btn btn-outline">Postularme</a>
+        </div>
+        
+        <div class="help-card glass">
+          <div class="help-card-icon"><i class="fas fa-boxes-packing"></i></div>
+          <h3>Donaciones en especie</h3>
+          <p>Apoyamos con útiles escolares directos, víveres secos, juguetes navideños o instrumentos en desuso que desees regalar.</p>
+          <a href="https://wa.me/59177040086?text=Hola!%20Tengo%20donativos%20en%20especie%20(alimentos/materiales)%20para%20hacer%20llegar%20a%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os." target="_blank" rel="noreferrer noopener" class="btn btn-outline">Coordinar entrega</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DONATION HUB (FORMULARIO GENERAL) ── -->
+  <section class="section donation-hub">
+    <div class="container reveal">
+      <div class="donation-hub-box glass">
+        <div style="text-align:center; margin-bottom:32px;">
+          <span class="section-tag">Centro de Donaciones</span>
+          <h2 style="font-size:2rem; margin-bottom:8px;">Hacer una donación en línea</h2>
+          <p style="color:var(--text-muted); font-size:0.9rem;">Elige la sede, el programa de impacto y el aporte deseado. Todos los pagos son directos y seguros.</p>
+        </div>
+        
+        <div style="display:flex; flex-direction:column; gap:16px;">
+          <div>
+            <label style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--gold); margin-bottom:8px; font-weight:600;">1. Elige el Centro Comunitario</label>
+            <select id="wizard-center" class="donate-select">
+              <option value="">-- Selecciona un centro --</option>
+              <option value="recreo">Shalom Recreo (Zona Recreo)</option>
+              <option value="pascana">Shalom Pascana (La Pascana)</option>
+              <option value="agape">Shalom Ágape (Zona Ágape)</option>
+              <option value="carmen">Shalom El Carmen (Plan 3000)</option>
+            </select>
+          </div>
+          
+          <div>
+            <label style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--gold); margin-bottom:8px; font-weight:600;">2. Elige el Programa</label>
+            <select id="wizard-program" class="donate-select" disabled>
+              <option value="">-- Selecciona un programa --</option>
+            </select>
+          </div>
+          
+          <div>
+            <label style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--gold); margin-bottom:8px; font-weight:600;">3. Elige el Monto del Aporte</label>
+            <div class="donation-grid">
+              <button class="donate-amt-btn wizard-amt-btn" data-amt="10">$10 USD<span>(70 Bs)</span></button>
+              <button class="donate-amt-btn wizard-amt-btn" data-amt="30">$30 USD<span>(210 Bs)</span></button>
+              <button class="donate-amt-btn wizard-amt-btn" data-amt="50">$50 USD<span>(350 Bs)</span></button>
+            </div>
+          </div>
+          
+          <div>
+            <label style="display:block; font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); margin-bottom:8px;">O escribe un monto personalizado (en Bolivianos):</label>
+            <input type="number" id="wizard-custom-amt" class="donate-input" placeholder="Monto libre en Bs.">
+          </div>
+          
+          <button id="wizard-submit-btn" class="btn btn-primary" style="width:100%; padding:16px;" disabled>
+            Elige Causa y Monto para continuar
+          </button>
+          
+          <p class="donation-note">
+            <i class="fas fa-lock" style="font-size:0.8rem; color:var(--emerald);"></i> Donación 100% cifrada y canalizada directamente a través de Livees.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER & CONTACT ── -->
+  <footer id="contacto">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>
+            <img src="Shalom/logo oficial nuevo.webp" alt="Shalom Logo" style="height:38px;">
+            Fundación Shalom
+          </h3>
+          <p>Organización sin fines de lucro dedicada a elevar la calidad de vida y restaurar el entorno social de la niñez y juventud en Santa Cruz de la Sierra, Bolivia. Establecida en 2015.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/profile.php?id=61550988893799&locale=es_LA" class="footer-social-btn" target="_blank" rel="noreferrer noopener" title="Facebook Recreo"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/fundacionshalomni.bo813_recreo" class="footer-social-btn" target="_blank" rel="noreferrer noopener" title="Instagram Recreo"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@fundacionshalom.bo183rc" class="footer-social-btn" target="_blank" rel="noreferrer noopener" title="TikTok Recreo"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Nuestros Centros</h4>
+          <ul class="footer-links">
+            <li><a href="#centros" onclick="showCenter('recreo')">Shalom Recreo</a></li>
+            <li><a href="#centros" onclick="showCenter('pascana')">Shalom Pascana</a></li>
+            <li><a href="#centros" onclick="showCenter('agape')">Shalom Ágape</a></li>
+            <li><a href="#centros" onclick="showCenter('carmen')">Shalom El Carmen</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>La Fundación</h4>
+          <ul class="footer-links">
+            <li><a href="#nosotros">¿Quiénes somos?</a></li>
+            <li><a href="#nosotros">Misión y Visión</a></li>
+            <li><a href="#nosotros">Nuestra Historia</a></li>
+            <li><a href="#ayuda">Cómo Ayudar</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contacto Oficial</h4>
+          <ul class="footer-links" style="color:var(--text-muted); font-size:0.9rem;">
+            <li style="margin-bottom:8px;"><i class="fas fa-envelope text-gold" style="margin-right:8px;"></i> <a href="mailto:info@fundacionshalomninos.com">info@fundacionshalomninos.com</a></li>
+            <li style="margin-bottom:8px;"><i class="fab fa-whatsapp text-gold" style="margin-right:8px;"></i> <a href="https://wa.me/59177040086" target="_blank" rel="noreferrer noopener">+591 77040086</a></li>
+            <li style="margin-bottom:8px;"><i class="fas fa-location-dot text-gold" style="margin-right:8px;"></i> Santa Cruz de la Sierra, Bolivia</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Fundación Shalom Niños · Bolivia · Todos los derechos reservados.</p>
+        <span class="footer-badge"><i class="fas fa-heart"></i> El 100% de tu donativo llega a su destino</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── MODAL GENERAL DONACIÓN (PREDEFINIDO DESDE NAVBAR) ── -->
+  <div class="modal-overlay" id="donateModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('donateModal')" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Soporte Directo</span>
+        <h3>Apoyar a la Fundación Shalom</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-highlight-box">
+          <p>Para asegurar que tu donación se dirija al programa correcto y su cobro sea exitoso, por favor elige una de las causas específicas desde el selector dinámico del formulario de la web o selecciona un centro de los listados en la página.</p>
+        </div>
+        
+        <div class="modal-footer" style="justify-content:center;">
+          <a href="#centros" onclick="closeModal('donateModal')" class="btn btn-primary">Ver Causas / Programas</a>
+          <a href="https://wa.me/59177040086?text=Hola!%20Me%20gustar%C3%ADa%20hacer%20un%20donativo%20general%20directo%20a%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os." target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Hablar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 18 INDIVIDUAL PROGRAM MODALS ── -->
+
+  <!-- ── RECREO MODALS ── -->
+
+  <!-- 1. Niños Sanos -->
+  <div class="modal-overlay" id="pm-ninos-sanos">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-ninos-sanos')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Recreo · Programa Nutricional</span>
+        <h3>Proyecto Niños Sanos</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Problema</h4>
+          <p class="modal-text">La desnutrición en la infancia frena el crecimiento corporal y bloquea las capacidades de aprendizaje. En la zona de El Recreo, cientos de niños asisten a clases con déficit alimentario.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Nuestra Respuesta</h4>
+          <p class="modal-text">Entregamos <strong>Raciones Secas Esenciales</strong> de alto valor alimenticio 4 veces al año. Además, acompañamos con seguimiento médico a los niños y talleres de preparación higiénica para las madres.</p>
+        </div>
+        
+        <div class="modal-highlight-box">
+          <p><strong>Tu impacto financia:</strong></p>
+          <ul class="modal-bullets">
+            <li>Cuerpos sanos y fuertes con defensas contra las infecciones.</li>
+            <li>Concentración en el aula escolar para evitar el retraso pedagógico.</li>
+            <li>Suministro de proteínas, cereales y minerales básicos anuales.</li>
+          </ul>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/yF4j" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Donación Básica</span>
+          </a>
+          <a href="https://lck.page.link/hc7B" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Sostiene 1 Niño</span>
+          </a>
+          <a href="https://lck.page.link/czSz" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Alto Impacto</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20proyecto%20Ni%C3%B1os%20sanos%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Recreo" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Computación para Todos -->
+  <div class="modal-overlay" id="pm-computacion">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-computacion')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Recreo · Área Tecnológica</span>
+        <h3>Computación para Todos</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Desafío</h4>
+          <p class="modal-text">La brecha digital margina a los jóvenes de escasos recursos de las oportunidades académicas y laborales del siglo XXI. Sin acceso a PCs ni programas licenciados, quedan rezagados.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Nuestra Acción</h4>
+          <p class="modal-text">Con 10 computadoras equipadas, enseñamos ofimática (Word, Excel) y diseño gráfico básico. Necesitamos cubrir <strong>2,000 Bs mensuales</strong> para el salario del profesor de computación.</p>
+        </div>
+
+        <div class="modal-quote">
+          "Las clases de computación me ayudaron a hacer mis tareas del colegio yo misma. ¡Nunca me imaginé aprendiendo Excel o Word! Siento que ya soy una profesional."
+          <span class="modal-quote-author">— Estefani Varón, 12 años</span>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/cMGA" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Soporte Técnico</span>
+          </a>
+          <a href="https://lck.page.link/J4n1" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Financia clases</span>
+          </a>
+          <a href="https://lck.page.link/7Yru" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Equipamiento e Internet</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Computaci%C3%B3n%20para%20todos%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Recreo" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Equipando Vidas -->
+  <div class="modal-overlay" id="pm-equipando">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-equipando')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Recreo · Área Educativa</span>
+        <h3>Equipando Vidas</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Problema</h4>
+          <p class="modal-text">Muchos niños abandonan la escuela básica simplemente porque sus padres no logran costear un cuaderno, lápices o una mochila limpia. La falta de útiles apaga sus sueños.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">La Meta</h4>
+          <p class="modal-text">Queremos elevar el valor de los kits de materiales escolares de <strong>60 Bs a 120 Bs por niño</strong>, entregando cuadernos gruesos, libros y cartucheras duraderas a 450 estudiantes. Financiamos también <strong>2,000 Bs mensuales</strong> del tutor de nivelación pedagógica.</p>
+        </div>
+
+        <div class="modal-highlight-box">
+          <p><strong>Con tu aporte escolar aseguras:</strong></p>
+          <ul class="modal-bullets">
+            <li>Un kit de útiles completo al iniciar el año lectivo.</li>
+            <li>Clases diarias de reforzamiento escolar para evitar aplazos.</li>
+            <li>Seguimiento de tareas difíciles de matemáticas e idioma.</li>
+          </ul>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/e96E" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Útiles Básicos</span>
+          </a>
+          <a href="https://lck.page.link/2d3A" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Kit Escolar Completo</span>
+          </a>
+          <a href="https://lck.page.link/Z68N" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Apadrinar Nivelación</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Apoyo%20escolar%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Recreo" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. El Deporte me Edifica -->
+  <div class="modal-overlay" id="pm-deporte">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-deporte')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Recreo · Prevención y Deporte</span>
+        <h3>El Deporte me Edifica</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Sentido</h4>
+          <p class="modal-text">El ocio improductivo expone a los adolescentes a pandillas y adicciones. El fútbol es una excelente herramienta para canalizar la energía, enseñar valores y disciplina.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Estado de Proyecto</h4>
+          <p class="modal-text">La escuela de fútbol operaba temporalmente y se detuvo. Deseamos reabrirla de forma continua recaudando <strong>1,500 Bs mensuales</strong> para el salario del profesor técnico de fútbol, balones y chalecos.</p>
+        </div>
+
+        <div class="modal-quote">
+          "Me encanta el fútbol. El profesor nos enseña a concentrarnos en la cancha para alejarnos de los vicios. ¡Nos entrenan en lo físico y mental!"
+          <span class="modal-quote-author">— Thiago, 13 años</span>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/r4N1" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Donación General</span>
+          </a>
+          <a href="https://lck.page.link/ENEv" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Uniforme y Equipamiento</span>
+          </a>
+          <a href="https://lck.page.link/UiwZ" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Sostiene la Cancha</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20El%20Deporte%20me%20edifica%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Recreo" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Música para el Alma -->
+  <div class="modal-overlay" id="pm-musica">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-musica')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Recreo · Área Artística</span>
+        <h3>Música para el Alma</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Proyecto</h4>
+          <p class="modal-text">La música despierta el intelecto, eleva la autoestima y ofrece sanidad emocional. Enseñamos guitarra, batería, bajo y piano a niños vulnerables que de otra forma jamás accederían a instrumentos.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Recaudación Necesaria</h4>
+          <p class="modal-text">Garantizar <strong>2,000 Bs mensuales</strong> de honorario para el profesor de música y adquirir cuerdas, parches de batería y dos teclados adicionales para abrir nuevos cupos.</p>
+        </div>
+
+        <div class="modal-quote">
+          "Tocar la batería es increíble. Puedo canalizar mi energía. El profesor nos enseña a valorar y cuidar los instrumentos como si fueran de oro."
+          <span class="modal-quote-author">— Alumno de Percusión</span>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/3wJT" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Cuerdas y Baquetas</span>
+          </a>
+          <a href="https://lck.page.link/epd5" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Sostiene la clase</span>
+          </a>
+          <a href="https://lck.page.link/i7D9" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Adquisición Instrumento</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20M%C3%BAsica%20para%20el%20alma%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Recreo" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Edificando Hogares -->
+  <div class="modal-overlay" id="pm-hogares">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-hogares')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Recreo · Área Familiar</span>
+        <h3>Edificando Hogares</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Foco</h4>
+          <p class="modal-text">La primera infancia es determinante. Capacitamos a madres con niños preescolares en pautas de estimulación temprana y nutrición de los bebés.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Emprendimiento</h4>
+          <p class="modal-text">Para fortalecer los ingresos del hogar, enseñamos a las madres panadería y costura. Tu donación compra kits de insumos de repostería y telas como capital semilla para sus proyectos.</p>
+        </div>
+
+        <div class="modal-quote">
+          "No solo recibí alimentos para mi bebé, sino que aprendí a cocinar postres y a confeccionar moños para el cabello. Ahora tengo mis primeros ingresos propios."
+          <span class="modal-quote-author">— Carla Andrea, Madre Beneficiaria</span>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/QE2Q" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Material de bebé</span>
+          </a>
+          <a href="https://lck.page.link/g7Ku" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Insumos Costura/Panadería</span>
+          </a>
+          <a href="https://lck.page.link/mGM9" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Equipamiento Mayor</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Edificando%20Hogares%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Recreo" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── PASCANA MODALS ── -->
+
+  <!-- 7. Nivelación Escolar -->
+  <div class="modal-overlay" id="pm-p-nivelacion">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-p-nivelacion')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Pascana · Refuerzo Académico</span>
+        <h3>Nivelación Escolar</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Propósito</h4>
+          <p class="modal-text">Muchos niños de La Pascana ingresan a primaria con carencias de lectoescritura graves, lo que genera repitencia escolar. Damos nivelación personalizada y paciencia.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Sostenimiento</h4>
+          <p class="modal-text">Necesitamos <strong>2,000 Bs al mes</strong> para la maestra de nivelación escolar que atiende a niños desfasados pedagógicamente.</p>
+        </div>
+
+        <div class="modal-quote">
+          "Las matemáticas me parecían una tortura. A veces lloraba. Pero con la paciencia de la maestra de la fundación, aprendí a mi propio ritmo y hoy me siento muy segura en la escuela."
+          <span class="modal-quote-author">— Marioly, 10 años (La Pascana)</span>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/J5L8" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Útiles y Pizarra</span>
+          </a>
+          <a href="https://lck.page.link/7yeZ" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Materiales didácticos</span>
+          </a>
+          <a href="https://lck.page.link/FkZE" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Apoyo Salarial Aula</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Nivelaci%C3%B3n%20escolar%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20La%20Pascana" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. La Educación Cambia Vidas -->
+  <div class="modal-overlay" id="pm-p-educacion">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-p-educacion')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Pascana · Kits de Estudio</span>
+        <h3>La Educación Cambia Vidas</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Problema</h4>
+          <p class="modal-text">El costo de las mochilas y útiles escolares es una barrera para familias con 4 o 5 hijos en La Pascana. Estudiar no debería ser un privilegio económico.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">La Meta</h4>
+          <p class="modal-text">Actualmente damos un kit básico de 60 Bs. Nuestra meta es subir el valor a <strong>120 Bs por niño</strong>, garantizando todos los útiles necesarios para que no haya deserción en ningún mes del año.</p>
+        </div>
+
+        <div class="modal-highlight-box">
+          <p>Tu donativo se destina íntegramente a mochilas duraderas, cuadernos, lápices de colores y reglas para 350 niños del centro.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/VVm6" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Soporte Básico</span>
+          </a>
+          <a href="https://lck.page.link/Ybef" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Kit Completo 120 Bs</span>
+          </a>
+          <a href="https://lck.page.link/NYuc" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Apadrina 3 Niños</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20La%20educaci%C3%B3n%20cambia%20vidas%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20La%20Pascana" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. Música para Niños (Pascana) -->
+  <div class="modal-overlay" id="pm-p-musica">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-p-musica')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Pascana · Expresión Artística</span>
+        <h3>Música para Niños</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Programa</h4>
+          <p class="modal-text">Los niños y niñas de La Pascana encuentran en la música un refugio y disciplina. Ofrecemos clases de bajo, batería, guitarra y canto coral.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Sostenimiento</h4>
+          <p class="modal-text">Necesitamos <strong>2,000 Bs mensuales</strong> para el salario de los dos profesores del taller de música y costear el mantenimiento de los instrumentos (cuerdas, micrófonos y afinadores).</p>
+        </div>
+
+        <div class="modal-quote">
+          "Me siento feliz cuando vengo a ensayar y tocar acordes. En la escuela de música aprendí que las cosas requieren disciplina y constancia. Traigo mi cuaderno de música muy alegre."
+          <span class="modal-quote-author">— Kaitly Avril, 11 años (Pascana)</span>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/tk6n" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Cuerdas y Accesorios</span>
+          </a>
+          <a href="https://lck.page.link/KaFk" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Financia Clases</span>
+          </a>
+          <a href="https://lck.page.link/5fpL" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Nuevo Instrumento</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20M%C3%BAsica%20para%20ni%C3%B1os%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20La%20Pascana" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. Alimentación Saludable (Pascana) -->
+  <div class="modal-overlay" id="pm-p-alimentacion">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-p-alimentacion')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Pascana · Nutrición</span>
+        <h3>Alimentación Saludable</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Desafío</h4>
+          <p class="modal-text">Una mala nutrición causa estragos en el desarrollo cerebral de los niños. En La Pascana, el programa de alimentación saludable asegura comida sana para combatir la anemia infantil.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">La Acción</h4>
+          <p class="modal-text">Repartimos raciones ricas en proteínas, verduras frescas y cereales. Las madres participan aprendiendo recetas saludables y económicas.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/16dt" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Ración de Comida</span>
+          </a>
+          <a href="https://lck.page.link/BAEP" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Soporte Nutricional</span>
+          </a>
+          <a href="https://lck.page.link/joj4" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Impacto Colectivo</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Alimentaci%C3%B3n%20Saludable%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20La%20Pascana" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. Niñas en Acción (Pascana) -->
+  <div class="modal-overlay" id="pm-p-ninas">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-p-ninas')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Pascana · Expresión Corporal</span>
+        <h3>Niñas en Acción</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Enfoque</h4>
+          <p class="modal-text">El taller de danza clásica y folclórica en Pascana brinda a las niñas un espacio para expresarse. Acompañamos las clases con talleres de autoestima, cuidado personal y consejería en valores bíblicos.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Uso de Fondos</h4>
+          <p class="modal-text">Tu donación ayuda a financiar los vestuarios de danza, las zapatillas, el mantenimiento del salón del taller y el estipendio mensual de la profesora de baile.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/w3Q3" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Accesorios Danza</span>
+          </a>
+          <a href="https://lck.page.link/USuT" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Sostiene clases</span>
+          </a>
+          <a href="https://lck.page.link/ahyR" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Vestuarios e Impacto</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Ni%C3%B1as%20en%20acci%C3%B3n%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20La%20Pascana" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12. Construyendo Futuros (Pascana) -->
+  <div class="modal-overlay" id="pm-p-futuro">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-p-futuro')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Pascana · Carácter y Liderazgo</span>
+        <h3>Construyendo Futuros</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Programa</h4>
+          <p class="modal-text">Consiste en guiar y discipular a adolescentes y jóvenes con principios éticos, de moral cristiana y valores humanos. Buscamos formar la futura generación de profesionales honestos y líderes en Bolivia.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Donativos</h4>
+          <p class="modal-text">Tu aporte apoya la logística de campamentos juveniles, adquisición de manuales de desarrollo y el trabajo de consejeros familiares que guían a jóvenes vulnerables.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/KdL8" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Materiales Liderazgo</span>
+          </a>
+          <a href="https://lck.page.link/d6uh" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Apadrinar un Joven</span>
+          </a>
+          <a href="https://lck.page.link/GzfD" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Soporte Actividades</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Construyendo%20futuros%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20La%20Pascana" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── ÁGAPE MODALS ── -->
+
+  <!-- 13. Música para Todos (Ágape) -->
+  <div class="modal-overlay" id="pm-a-musica">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-a-musica')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Ágape · Inclusión Artística</span>
+        <h3>Música para Todos</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">La Misión</h4>
+          <p class="modal-text">Un espacio musical abierto a niños y jóvenes en alianza con la Iglesia Bautista Shalom Ágape. Enseñamos violín, guitarra, teclado y batería para fomentar la expresión artística e inclusión social.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Necesidades</h4>
+          <p class="modal-text">El aporte costea el estipendio mensual del profesor y el mantenimiento de cuerdas, parches y baquetas de percusión.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/wH9Z" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Cuerdas y Baquetas</span>
+          </a>
+          <a href="https://lck.page.link/Kf3J" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Financia Clases</span>
+          </a>
+          <a href="https://lck.page.link/jbii" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Instrumento Nuevo</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20M%C3%BAsica%20para%20ni%C3%B1os%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20La%20Pascana" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14. Hora Feliz Ágape -->
+  <div class="modal-overlay" id="pm-a-horafeliz">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-a-horafeliz')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Ágape · Recreación y Valores</span>
+        <h3>Hora Feliz Ágape</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Programa</h4>
+          <p class="modal-text">Un punto de encuentro semanal de niños y familias para juegos, cantos, historias en valores cristianos y meriendas sanas. Llena de alegría y contención las tardes de los niños del barrio.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Metas de Equipamiento</h4>
+          <p class="modal-text">Recaudamos para sillas de plástico infantiles, mesas plegables, parlantes portátiles y el presupuesto de alimentos semanales.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/zvrq" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Meriendas del sábado</span>
+          </a>
+          <a href="https://lck.page.link/Vzvc" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Sillas y Mobiliario</span>
+          </a>
+          <a href="https://lck.page.link/t8jR" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Parlante y Equipos</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Hora%20Feliz%20El%20Carmen%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Carmen" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15. Letras que Dan Vida -->
+  <div class="modal-overlay" id="pm-a-letras">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-a-letras')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom Ágape · Alfabetización</span>
+        <h3>Letras que Dan Vida</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Problema</h4>
+          <p class="modal-text">Muchas abuelas y madres de familias carentes de la zona jamás asistieron a la escuela básica. Depender de otros para firmar un papel o leer una calle les resta autonomía.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Impacto</h4>
+          <p class="modal-text">Les enseñamos a leer, escribir, reconocer números y realizar operaciones aritméticas básicas. Necesitamos <strong>2,000 Bs al mes</strong> para el profesor de adultos y cartillas de aprendizaje específicas.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/eMJb" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Cuadernos de escritura</span>
+          </a>
+          <a href="https://lck.page.link/34c1" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Kit completo material</span>
+          </a>
+          <a href="https://lck.page.link/QBTn" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Sostiene al profesor</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Edificando%20Hogares%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Recreo" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── EL CARMEN MODALS ── -->
+
+  <!-- 16. Alimentación para la Vida (El Carmen) -->
+  <div class="modal-overlay" id="pm-c-alimentacion">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-c-alimentacion')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom El Carmen · Proyecto Nutrición</span>
+        <h3>Alimentación para la Vida</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">Urgencia Máxima</h4>
+          <p class="modal-text">El centro de El Carmen atiende a familias en pobreza extrema del Plan 3000. Los niños de esta zona aún no tienen garantizada su alimentación regular y padecen índices alarmantes de desnutrición.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Plan</h4>
+          <p class="modal-text">Tu donación de alimentos secos iniciará la entrega periódica de arroz, lentejas, aceite y proteínas para que se alimenten adecuadamente en el hogar.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/j2e1" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Apoyo Alimentario</span>
+          </a>
+          <a href="https://lck.page.link/sppy" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Ración familiar</span>
+          </a>
+          <a href="https://lck.page.link/iRRR" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Sostiene la nutrición</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Alimentaci%C3%B3n%20para%20la%20vida%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Carmen" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17. Hora Feliz El Carmen -->
+  <div class="modal-overlay" id="pm-c-horafeliz">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-c-horafeliz')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom El Carmen · Recreación y Valores</span>
+        <h3>Hora Feliz El Carmen</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Programa</h4>
+          <p class="modal-text">Un espacio semanal en un barrio muy alejado de la ciudad. Brindamos merienda nutritiva los sábados a niños que muchas veces no han comido nada sólido en el día, combinándolo con lecciones de respeto, honestidad y amor.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Destino de la Donación</h4>
+          <p class="modal-text">Financia la preparación semanal de la merienda (leche, chocolate, pan, frutas), hojas de dibujo, lápices y materiales de limpieza.</p>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/fojC" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Soporte Básico</span>
+          </a>
+          <a href="https://lck.page.link/XJQS" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Meriendas del mes</span>
+          </a>
+          <a href="https://lck.page.link/eBuh" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Meriendas y Materiales</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Hora%20Feliz%20El%20Carmen%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Carmen" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 18. Centro de Esperanza (Infraestructura) -->
+  <div class="modal-overlay" id="pm-c-centro">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModal('pm-c-centro')"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <span class="modal-subheader">Shalom El Carmen · Infraestructura</span>
+        <h3>Centro de Esperanza</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4 class="modal-section-title">El Desafío</h4>
+          <p class="modal-text">Contamos con aulas a medio levantar, paredes sin revoque, carentes de techo y de baños higiénicos. Sin un edificio seguro no podemos ofrecer clases diarias ni comedor.</p>
+        </div>
+        <div class="modal-section">
+          <h4 class="modal-section-title">Meta de Construcción</h4>
+          <p class="modal-text">Instalar la cubierta (techo), construir dos sanitarios conectados a red y levantar un auditorio para asambleas de vecinos y eventos infantiles.</p>
+        </div>
+
+        <div class="modal-highlight-box">
+          <p><strong>El futuro que harás posible:</strong></p>
+          <ul class="modal-bullets">
+            <li>Refuerzo pedagógico diario y apoyo alimentario en un espacio seguro.</li>
+            <li>Sala de cómputo con internet para las tareas escolares del Plan 3000.</li>
+            <li>Talleres de capacitación para toda la comunidad vecinal.</li>
+          </ul>
+        </div>
+
+        <h4 class="modal-section-title">Elige un monto para donar en Livees</h4>
+        <div class="modal-checkout-grid">
+          <a href="https://lck.page.link/upmU" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$10 USD</span>
+            <span class="checkout-card-desc">Donar Ladrillos</span>
+          </a>
+          <a href="https://lck.page.link/Cdvc" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$30 USD</span>
+            <span class="checkout-card-desc">Materiales de Techo</span>
+          </a>
+          <a href="https://lck.page.link/1nF9" target="_blank" rel="noreferrer noopener" class="modal-checkout-card">
+            <span class="checkout-card-amt">$50 USD</span>
+            <span class="checkout-card-desc">Aporte de Cemento</span>
+          </a>
+        </div>
+
+        <div class="modal-footer">
+          <a href="https://wa.me/59177040086?text=Por%20favor%20quiero%20m%C3%A1s%20informaci%C3%B3n%20acerca%20del%20Proyecto%20Centro%20de%20esperanza%20de%20la%20Fundaci%C3%B3n%20Shalom%20Ni%C3%B1os%20El%20Carmen" target="_blank" rel="noreferrer noopener" class="btn btn-outline">
+            <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
